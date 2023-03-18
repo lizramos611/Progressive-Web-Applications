@@ -18,12 +18,36 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        chunks: ['main'],
+        filename: 'index.html'
+      }),
+      new WebpackPwaManifest({
+        name: 'text editor',
+        short_name: 'TE',
+        fingerprints: false,
+        inject: true,
+
+      })
       
     ],
 
     module: {
       rules: [
-        
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader']
+        },
+        {
+          test: /.m?js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['babel/preset-env']
+            }
+          }
+        }
       ],
     },
   };
