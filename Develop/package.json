@@ -1,25 +1,33 @@
 {
-  "name": "JATE",
+  "name": "progressive-web-applications",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creating a text editor where a user can create notes.",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizramos611/Progressive-Web-Applications.git"
+  },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "if-env": "^1.0.4"
+  "bugs": {
+    "url": "https://github.com/lizramos611/Progressive-Web-Applications/issues"
   },
+  "homepage": "https://github.com/lizramos611/Progressive-Web-Applications#readme",
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
+    "webpack": "^5.76.2"
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.21"
   }
 }

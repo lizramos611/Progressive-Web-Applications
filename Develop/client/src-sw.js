@@ -32,3 +32,5 @@ registerRoute
   (({request}) => request.mode == 'naivgate', pageCache)
   registerRoute(({request}) => ['style', 'script', 'worker'].includes (request.destination),
   )
+
+  registerRoute();
