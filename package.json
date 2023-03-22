@@ -1,0 +1,19 @@
+{
+  "name": "progressive-web-applications",
+  "version": "1.0.0",
+  "description": "Creating a text editor where a user can create notes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lizramos611/Progressive-Web-Applications.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lizramos611/Progressive-Web-Applications/issues"
+  },
+  "homepage": "https://github.com/lizramos611/Progressive-Web-Applications#readme"
+}
