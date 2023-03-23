@@ -1,3 +1,3 @@
 # Progressive-Web-Applications
 
-Creating a text editor where a user can create notes.
+Creating a text editor where a user can create notes and uses Webpack!
